@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
 import random
 
+totalPriceList = []
+itineraryList = []
+
 #GLOBAL VARIABLES
 listOfCities = ["copenhagen"]
 kindsOfActivities = ["museum", "amusement park", "castle"]
