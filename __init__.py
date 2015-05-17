@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
 import json
 
+#GLOBAL VARIABLES
+listOfCities = ["copenhagen"]
+
 def calculateItinerary(city, budget, date):
+  #_id, name, address, , price, openinghour, closinghour, description, type
   #calculate itinerary here!!!
   it1 = "Museum, Restaurant, Park, Cinema"
   it2 = "Park, Fast Food, Channels, Bar"
@@ -17,10 +21,15 @@ app.config['SECRET_KEY'] = 'F34TF$($e34D';
 
 @app.route('/')
 def home():
-	try:
-   		return render_template('index.html')
-   	except Exception, e:
-   		return str(e)
+  global errorMessage
+  try:
+    print errorMessage
+  except:
+    errorMessage = ""
+  try:
+    return render_template('index.html', errorMessage=errorMessage)
+  except Exception, e:
+    return str(e)
 
 @app.route('/MainPage', methods=['POST'])
 def MainPage():
@@ -39,19 +48,29 @@ def summary():
         return abort(403)
     
     city = session['city']
-    budget = session['budget']
     date = session['date']
-    print 'The city is: ', city
-    print 'the budget is: ', budget
-    print 'The date is: ', date
-    
-    global itinList
-    global costList
-    itinList, costList =  calculateItinerary(city, budget, date)
-    
-    return render_template('summaryPage.html', itin1=itinList[0], itin2=itinList[1], itin3=itinList[2], itin4=itinList[3], 
-                                               cost1=costList[0], cost2=costList[1], cost3=costList[2], cost4=costList[3],
-                                               date=date, city=city, budget=budget)
+    budget = session['budget']
+    global errorMessage
+    try:
+      budget = int(budget)
+    except Exception, e:
+      errorMessage = "Please insert budget correctly"
+      return redirect(url_for('home'))
+    try:
+      if city.lower() not in listOfCities:
+        errorMessage = "Please choose an available city"
+        return redirect(url_for('home'))
+      else:
+        errorMessage = ""
+        global itinList
+        global costList
+        itinList, costList =  calculateItinerary(city, budget, date)
+        
+        return render_template('summaryPage.html', itin1=itinList[0], itin2=itinList[1], itin3=itinList[2], itin4=itinList[3], 
+                                                   cost1=costList[0], cost2=costList[1], cost3=costList[2], cost4=costList[3],
+                                                   date=date, city=city, budget=budget)
+    except Exception, e:
+      return str(e)
 
 @app.route('/anotherPage', methods=['GET'])
 def anotherPage():

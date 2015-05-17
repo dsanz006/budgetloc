@@ -73,11 +73,18 @@
 			<p><a class="btn btn-lg btn-primary" href="http://bike2gether.us3.list-manage1.com/subscribe?u=1c05c52c6ce9dd354c6428fa2&id=55b43a8f14" target="_blank" role="button">Sign up today!</a></p>
 			<br/><br/>
 			<h1>Get an offer!</h1>
+			<br/> <p><font color="red">{{ errorMessage }}</font></p>
 			
 			<br/>
 
 			<form method="post" action="{{ url_for('MainPage') }}">
-		        <p><label>City:</label> <input type="text" name="city" required></p>
+		        <!-- <p><label>City:</label> <input type="text" name="city" required></p> -->
+
+				<p><label>City:</label> <input list="cities" name="city"></p>
+				  <datalist id="cities">
+				    <option value="Copenhagen">
+				  </datalist>
+
 		        <p><label>Budget (Danish Kroner):</label> <input type="text" name="budget" required></p>
 		        <p>Date:</p> <input class="inputDate" id="inputDate" value="05/02/2015" name="date"/><br/><br/>
 		        <button type="reset" value="Reset" class="btn btn-danger" >Reset</button>

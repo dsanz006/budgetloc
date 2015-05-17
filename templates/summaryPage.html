@@ -47,8 +47,8 @@
 
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="index.html">Budget</a></li>
-            <li role="presentation"><a href="about.html">About</a></li>
+            <li role="presentation" class="active"><a href="{{ url_for('home') }}">Budget</a></li>
+            <li role="presentation"><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
             <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
           </ul>
@@ -62,7 +62,7 @@
 
     <div class="jumbotron">
         <h1>BudgetLoc</h1>
-<p>Selected Options: City: {{ city }}, Budget: {{ budget }} Kr , Date: {{ date }}</p>
+<p>Selected Options: City: <font color="LightSlateGray">{{ city }}</font>, Budget: <font color="LightSlateGray">{{ budget }} Kr</font> , Date: <font color="LightSlateGray">{{ date }}</font></p>
 <br><br><br>
 <p> Summary of Options: </p>
 <br>
