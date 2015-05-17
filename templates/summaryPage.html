@@ -66,9 +66,22 @@
 <br><br><br>
 <p> Summary of Options: </p>
 <br>
+<!--
 <form method="post" action="{{ url_for('anotherPage') }}">
     <p><label>Preferred Itinerary:</label> <input type="text" name="chosenIt" required></p>
     <p><button type="submit" class="btn btn-success">Submit</button></p>
+</form>
+-->
+
+<form action="{{ url_for('anotherPage') }}" method="get">
+  <p><label><font color="LightSlateGray">Choose itinerary (from 1 to 4):</font></label> <input list="itineraries" name="itinerary"></p>
+  <datalist id="itineraries">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+  </datalist>
+  <p><button type="submit" class="btn btn-success">Submit</button></p>
 </form>
 
 <table id="t01">

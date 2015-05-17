@@ -5,36 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="assets/css/results.css" />
-	<link rel="icon" href="assets/images/favicon.ico">   
+	<link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='assets/css/results.css') }}" />
+	<link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}">   
    <title>Results budgetLoc | Stay on budget while travelling</title>
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
 	<!-- Custom styles for this template -->
-	<link href="jumbotron-narrow.css" rel="stylesheet">
+	<link href="{{ url_for('static',filename='jumbotron-narrow.css') }}" rel="stylesheet">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="datepicker/css/datepicker.css" type="text/css" />
-	<link rel="stylesheet" media="screen" type="text/css" href="datepicker/css/layout.css" />
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ url_for('static',filename='dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="{{ url_for('static',filename='bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet">
 	<!-- Le styles -->
-	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{{ url_for('static',filename='bootstrap/css/bootstrap.css') }}" rel="stylesheet">
 
 <style>
 
 </style>
 
-<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
+<link href="{{ url_for('static',filename='bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet">   
 
 </head>
 
@@ -123,12 +121,12 @@
   
 	  
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js') }}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-	<script src="../../assets/js/storeItineraryOptions.js"></script>
+    <script src="{{ url_for('static',filename='../../assets/js/ie10-viewport-bug-workaround.js') }}"></script>
+	<script src="{{ url_for('static',filename='../../assets/js/storeItineraryOptions.js') }}"></script>
 
 </body>
 </html>

@@ -52,9 +52,12 @@ def summary():
                                                cost1=costList[0], cost2=costList[1], cost3=costList[2], cost4=costList[3],
                                                date=date, city=city, budget=budget)
 
-@app.route('/anotherPage', methods=['POST'])
+@app.route('/anotherPage', methods=['GET'])
 def anotherPage():
-    session['chosenButton'] = request.form['chosenIt']
+    try:
+      session['chosenButton'] = request.args['itinerary']
+    except Exception, e:
+      return str(e)
     print 'preferred itinerary is: ', session['chosenButton']
     return redirect(url_for('finalPage'))
 
