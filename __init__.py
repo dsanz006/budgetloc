@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
+import json
 
 def calculateItinerary(city, budget, date):
   #calculate itinerary here!!!
