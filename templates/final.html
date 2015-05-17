@@ -63,8 +63,6 @@
 <p>Selected Options: City: <font color="LightSlateGray">{{ city }}</font>, Budget: <font color="LightSlateGray">{{ budget }} Kr</font> , Date: <font color="LightSlateGray">{{ date }}</font></p>
 <br><br><br>
 <p> Selected itinerary: </p>
-<p> Attractions: {{ selectedItinerary }} </p>
-<p> Cost: {{ selectedCost }} </p>
 <br>
 
 <table id="t01">
@@ -77,38 +75,28 @@
     <th>Estimated Cost</th>
   </tr>
   <tr>
-    <td>10:00</td>
-    <td>The Little Mermaid</td>		
-    <td>Statue</td>
-    <td>The Little Mermaid is a bronze statue by Edvard Eriksen, depicting a mermaid</td>
-    <td>Langelinie, 2100 Copenhagen</td>
-    <td>Free</td>
+    <td>{{ start1 }}:00 - {{ end1 }}:00</td>
+    <td>{{ name1 }}</td>		
+    <td>{{ type1 }}</td>
+    <td>{{ description1 }}</td>
+    <td>{{ address1 }}</td>
+    <td>{{ price1 }}</td>
   </tr>
   <tr>
-    <td>12:30</td>
-    <td>Neighbourhood</td>		
-    <td>Restaurant</td>
-    <td>Neighbourhood in Copenhagen's hip Vesterbro district is an all organic gourmet pizza and cocktail bar and local hang-out, where vinyl tunes fill the air, and community table seating makes it impossible not to meet your neighbours.</td>
-    <td>Istedgade 27, 1650 Copenhagen</td>
-    <td>135 Kr</td>
+    <td>{{ start2 }}:00 - {{ end2 }}:00</td>
+    <td>{{ name2 }}</td>    
+    <td>{{ type2 }}</td>
+    <td>{{ description2 }}</td>
+    <td>{{ address2 }}</td>
+    <td>{{ price2 }}</td>
   </tr>
-  <tr>
-    <td>15:00</td>
-    <td>National Museum</td>		
-    <td>Museum</td>
-    <td>The National Museum is located in The Princes Palace, which was built by Nicolai Eigtved between 1743 and 1744 for Danish Crown Prince Frederik V and Crown Princess Louise. It is no longer used by the royal family, but the Great Hall still appears elegant enough to fit princes and princesses.</td>
-    <td>Prinsens Palae, Ny Vestergade 10, 1471 Copenhagen</td>
-    <td>Free</td>
-  </tr>
-  <tr>
-    <td>18:00</td>
-    <td>Jolene</td>		
-    <td>Bar</td>
-    <td>Jolene opened in 2007 and instantly became a boisterous success. So boisterous it was shut down after only 4 months due to incessant neighbour complaints.</td>
-    <td>Flaesketorvet 81-85, 1711 Copenhagen</td>
-    <td>50 kr</td>
-  </tr>
+  
 </table>
+<br/>
+<p> Total price: {{ selectedCost }} </p>
+<br/> <br/>
+<li role="presentation" class="active"><a href="{{ url_for('home') }}">New Search</a></li>
+
       </div>
 </div> <!-- /container -->
 
