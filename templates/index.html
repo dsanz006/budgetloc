@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<link rel="stylesheet" href= "{{ url_for('static',filename='assets/css/style.css') }}"/>
+	<link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}">   
+   <title>budgetLoc | Stay on budget while travelling</title>
+
+	<!-- Bootstrap -->
+	<link href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="{{ url_for('static',filename='jumbotron-narrow.css') }}" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='datepicker/css/datepicker.css') }}" type="text/css" />
+	<link rel="stylesheet" media="screen" type="text/css" href="{{ url_for('static',filename='datepicker/css/layout.css') }}" />
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap-theme.min.css') }}">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+
+	<link href="{{ url_for('static',filename='bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet"> 
+  
+ <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static',filename='../assets/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static',filename='../assets/ico/apple-touch-icon-114-precomposed.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static',filename='../assets/ico/apple-touch-icon-72-precomposed.png') }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ url_for('static',filename='../assets/ico/apple-touch-icon-57-precomposed.png') }}">
+
+
+	<script type="text/javascript" src="{{ url_for('static',filename='datepicker/js/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static',filename='datepicker/js/datepicker.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static',filename='datepicker/js/eye.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static',filename='datepicker/js/utils.js') }}"></script>
+	
+</head>
+
+  <body>
+  
+    <div class="container">
+	
+		<div class="header clearfix">
+
+			<nav>
+			  <ul class="nav nav-pills pull-right">
+				<li role="presentation" class="active"><a href="{{ url_for('home') }}">Budget</a></li>
+				<li role="presentation"><a href="{{ url_for('about') }}">About</a></li>
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			  </ul>
+			</nav>
+			<h3 class="text-muted">budgetLoc</h3>
+		</div>
+	<br/>
+	<div class="jumbotron">
+			<h1>budgetLoc</h1>
+			<br/>
+			<p>Stay on budget<br/>while travelling</p>
+			<br/>
+			<ul>
+				<li >Select categories</li>
+				<li >Get offers</li>
+				<li >Pay safely</li>
+          </ul>
+		  <br/>
+			<p><a class="btn btn-lg btn-primary" href="http://bike2gether.us3.list-manage1.com/subscribe?u=1c05c52c6ce9dd354c6428fa2&id=55b43a8f14" target="_blank" role="button">Sign up today!</a></p>
+			<br/><br/>
+			<h1>Get an offer!</h1>
+			
+			<br/>
+
+			<form method="post" action="{{ url_for('MainPage') }}">
+		        <p><label>City:</label> <input type="text" name="city" required></p>
+		        <p><label>Budget (Danish Kroner):</label> <input type="text" name="budget" required></p>
+		        <p>Date:</p> <input class="inputDate" id="inputDate" value="05/02/2015" name="date"/><br/><br/>
+		        <button type="reset" value="Reset" class="btn btn-danger" >Reset</button>
+		        <p><button type="submit" onclick="storeItineraryOptions()" class="btn btn-success">Submit</button></p>
+	    	</form>
+
+			<p id="demo"></p>
+		</div>
+	</div> <!-- /container -->
+
+<!-- Footer -->
+	<footer id="footer">
+		<ul class="copyright">
+			<li>&copy; budgetLoc 2015</li>
+		</ul>
+	</footer>
+  
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+	<script src="{{ url_for('static',filename='//code.jquery.com/jquery-1.11.3.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='//code.jquery.com/jquery-migrate-1.2.1.min.js') }}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ url_for('static',filename='assets/js/ie10-viewport-bug-workaround.js') }}"></script>
+	<script src="{{ url_for('static',filename='assets/js/storeItineraryOptions.js') }}"></script>
+	
+	
+  
+  </body>
+</html>

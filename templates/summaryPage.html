@@ -1,0 +1,122 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/results.css') }}" />
+    <link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}">   
+   <title>Results budgetLoc | Stay on budget while travelling</title>
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='jumbotron-narrow.css') }}" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='datepicker/css/datepicker.css') }}" type="text/css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="{{ url_for('static',filename='datepicker/css/layout.css') }}" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css') }}">
+    <link href="{{ url_for('static',filename='dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link href="{{ url_for('static',filename='bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet">
+    <!-- Le styles -->
+    <link href="{{ url_for('static',filename='bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+
+<style>
+
+</style>
+
+<link href="{{ url_for('static',filename='bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet">   
+
+</head>
+
+ <body>
+  
+  
+    <div class="container">
+    
+<div class="header clearfix">
+
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="index.html">Budget</a></li>
+            <li role="presentation"><a href="about.html">About</a></li>
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">budgetLoc</h3>
+      </div>
+      </div>
+    <div class="container">
+
+
+
+    <div class="jumbotron">
+        <h1>BudgetLoc</h1>
+<p>Selected Options: City: {{ city }}, Budget: {{ budget }} Kr , Date: {{ date }}</p>
+<br><br><br>
+<p> Summary of Options: </p>
+<br>
+<form method="post" action="{{ url_for('anotherPage') }}">
+    <p><label>Preferred Itinerary:</label> <input type="text" name="chosenIt" required></p>
+    <p><button type="submit" class="btn btn-success">Submit</button></p>
+</form>
+
+<table id="t01">
+  <tr>
+    <th>Option</th>
+    <th>Summary of Itinerary</th>
+    <th>Estimated Cost</th>    
+  </tr>
+  <tr>
+    <td>1</td>
+    <td> {{ itin1 }}</td>     
+    <td> {{ cost1 }}</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td> {{ itin2 }}</td>     
+    <td> {{ cost2 }}</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td> {{ itin3 }}</td>     
+    <td> {{ cost3 }}</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td> {{ itin4 }}</td>     
+    <td> {{ cost4 }}</td>
+  </tr>
+</table>
+      </div>
+</div> <!-- /container -->
+
+
+<!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; budgetLoc 2015</li>
+        </ul>
+    </footer>
+  
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ url_for('static',filename='../../assets/js/ie10-viewport-bug-workaround.js') }}"></script>
+    <script src="{{ url_for('static',filename='../../assets/js/storeItineraryOptions.js') }}"></script>
+
+</body>
+</html>

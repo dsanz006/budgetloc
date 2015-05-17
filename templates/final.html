@@ -1,0 +1,134 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/results.css" />
+	<link rel="icon" href="assets/images/favicon.ico">   
+   <title>Results budgetLoc | Stay on budget while travelling</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="jumbotron-narrow.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="datepicker/css/datepicker.css" type="text/css" />
+	<link rel="stylesheet" media="screen" type="text/css" href="datepicker/css/layout.css" />
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<!-- Le styles -->
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+<style>
+
+</style>
+
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
+
+</head>
+
+ <body>
+  
+  
+	<div class="container">
+	
+<div class="header clearfix">
+
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="index.html">Budget</a></li>
+            <li role="presentation"><a href="about.html">About</a></li>
+			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+          </ul>
+        </nav>
+		<h3 class="text-muted">budgetLoc</h3>
+      </div>
+	  </div>
+    <div class="container">
+
+
+
+	<div class="jumbotron">
+        <h1>BudgetLoc</h1>
+<p>Selected Options: City: {{ city }}, Budget: {{ budget }} Kr , Date: {{ date}}</p>
+<br><br><br>
+<p> Selected itinerary: </p>
+<p> Attractions: {{ selectedItinerary }} </p>
+<p> Cost: {{ selectedCost }} </p>
+<br>
+
+<table id="t01">
+  <tr>
+  	<th>Time</th>
+    <th>Attraction Name</th>
+    <th>Attraction Kind</th>		
+    <th>Description</th>
+    <th>Location</th>
+    <th>Estimated Cost</th>
+  </tr>
+  <tr>
+    <td>10:00</td>
+    <td>The Little Mermaid</td>		
+    <td>Statue</td>
+    <td>The Little Mermaid is a bronze statue by Edvard Eriksen, depicting a mermaid</td>
+    <td>Langelinie, 2100 Copenhagen</td>
+    <td>Free</td>
+  </tr>
+  <tr>
+    <td>12:30</td>
+    <td>Neighbourhood</td>		
+    <td>Restaurant</td>
+    <td>Neighbourhood in Copenhagen's hip Vesterbro district is an all organic gourmet pizza and cocktail bar and local hang-out, where vinyl tunes fill the air, and community table seating makes it impossible not to meet your neighbours.</td>
+    <td>Istedgade 27, 1650 Copenhagen</td>
+    <td>135 Kr</td>
+  </tr>
+  <tr>
+    <td>15:00</td>
+    <td>National Museum</td>		
+    <td>Museum</td>
+    <td>The National Museum is located in The Princes Palace, which was built by Nicolai Eigtved between 1743 and 1744 for Danish Crown Prince Frederik V and Crown Princess Louise. It is no longer used by the royal family, but the Great Hall still appears elegant enough to fit princes and princesses.</td>
+    <td>Prinsens Palae, Ny Vestergade 10, 1471 Copenhagen</td>
+    <td>Free</td>
+  </tr>
+  <tr>
+    <td>18:00</td>
+    <td>Jolene</td>		
+    <td>Bar</td>
+    <td>Jolene opened in 2007 and instantly became a boisterous success. So boisterous it was shut down after only 4 months due to incessant neighbour complaints.</td>
+    <td>Flaesketorvet 81-85, 1711 Copenhagen</td>
+    <td>50 kr</td>
+  </tr>
+</table>
+      </div>
+</div> <!-- /container -->
+
+<!-- Footer -->
+	<footer id="footer">
+		<ul class="copyright">
+			<li>&copy; budgetLoc 2015</li>
+		</ul>
+	</footer>
+  
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../assets/js/storeItineraryOptions.js"></script>
+
+</body>
+</html>
